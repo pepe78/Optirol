@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\tarab\OneDrive\Desktop\Optirol1.1\Optirol.exe-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F2155386-25BD-4CE3-96C3-A3AD6CC7B8C8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>Optirol</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Optrol.Theory</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SharpGL">
+      <HintPath>lib\SharpGL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Optirol\Properties\Settings.cs" />
+    <Compile Include="Optirol\Properties\Resources.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Optirol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Point.cs" />
+    <Compile Include="DistanceInt.cs" />
+    <Compile Include="PointCollection.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Optimizer.cs" />
+    <Compile Include="Systems\BaseSystem.cs" />
+    <Compile Include="Systems\Functions.cs" />
+    <Compile Include="Systems\operation.cs" />
+    <Compile Include="Systems\equation.cs" />
+    <Compile Include="Systems\parameter.cs" />
+    <Compile Include="Systems\control.cs" />
+    <Compile Include="Systems\optim.cs" />
+    <Compile Include="Systems\variable.cs" />
+    <Compile Include="Systems\BuiltSystem.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Optirol.resx">
+      <DependentUpon>Optirol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Optirol\Properties\Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
