@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace Optrol.Theory
 {
-  internal class Point
+  public class Point
   {
     public double Energy;
     public int id;

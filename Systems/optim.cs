@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Optrol.Theory.Systems
 {
-  internal class optim
+  public class optim
   {
     public equation eq;
     public int _line;

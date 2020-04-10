@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Optrol.Theory.Systems
 {
-  internal class variable
+  public class variable
   {
     public int line;
     public double min;

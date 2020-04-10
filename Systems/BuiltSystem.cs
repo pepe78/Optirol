@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Optrol.Theory.Systems
 {
-  internal class BuiltSystem : BaseSystem
+  public class BuiltSystem : BaseSystem
   {
     private List<control> controls;
     public List<variable> variables;

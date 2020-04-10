@@ -6,7 +6,7 @@
 
 namespace Optrol.Theory.Systems
 {
-  internal class BaseSystem
+  public class BaseSystem
   {
     protected double[] mins;
     protected double[] maxs;

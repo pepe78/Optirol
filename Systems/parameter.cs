@@ -6,7 +6,7 @@
 
 namespace Optrol.Theory.Systems
 {
-  internal class parameter
+  public class parameter
   {
     public double[] pars;
     public string name;

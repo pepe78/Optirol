@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace Optrol.Theory.Systems
 {
-  internal class equation
+  public class equation
   {
     private string formula;
     private equation left;

@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Optrol.Theory.Systems
 {
-  internal class control
+  public class control
   {
     public double min;
     public double max;

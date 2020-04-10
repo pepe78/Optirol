@@ -841,33 +841,23 @@ namespace Optrol
           this.chart1.Series[index + this.system.GetConDim()].Points.AddXY(0.0, point[index]);
         }
         double xValue = 0.0;
-        double[] ret = new double[this.system.GetDimension()];
         for (int index1 = 0; index1 < num3; ++index1)
         {
-          double[] controlValue = this.pc.GetControlValue(this.system, point);
-          if (controlValue != null)
-          {
-            this.system.GetDerivative(point, controlValue, this.system.GetParSet(this.comboBox6.SelectedIndex), ret);
-            double[] numArray = new double[point.Length];
-            for (int index2 = 0; index2 < point.Length; ++index2)
-              numArray[index2] = point[index2] + num2 * ret[index2];
-            point = numArray;
+            double[] controlValue;
+            point = RungeKutta.MovePoint(this.pc, this.system, point, out controlValue, system.GetParSet(this.comboBox6.SelectedIndex), num2);
             xValue = ((double) index1 + 1.0) * num2;
             this.dataGridView3.Rows.Add();
             this.dataGridView3.Rows[index1 + 1].Cells[0].Value = (object) xValue;
             for (int index2 = 0; index2 < controlValue.Length; ++index2)
             {
-              this.dataGridView3.Rows[index1].Cells[index2 + 1 + point.Length].Value = (object) controlValue[index2];
-              this.chart1.Series[index2].Points.AddXY((double) index1 * num2, controlValue[index2]);
+                this.dataGridView3.Rows[index1].Cells[index2 + 1 + point.Length].Value = (object) controlValue[index2];
+                this.chart1.Series[index2].Points.AddXY((double) index1 * num2, controlValue[index2]);
             }
             for (int index2 = 0; index2 < point.Length; ++index2)
             {
-              this.dataGridView3.Rows[index1 + 1].Cells[index2 + 1].Value = (object) point[index2];
-              this.chart1.Series[index2 + controlValue.Length].Points.AddXY(xValue, point[index2]);
+                this.dataGridView3.Rows[index1 + 1].Cells[index2 + 1].Value = (object) point[index2];
+                this.chart1.Series[index2 + controlValue.Length].Points.AddXY(xValue, point[index2]);
             }
-          }
-          else
-            break;
         }
         this.chart1.ChartAreas[0].AxisX.Minimum = 0.0;
         this.chart1.ChartAreas[0].AxisX.Maximum = xValue;

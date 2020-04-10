@@ -11,9 +11,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 
-namespace Optrol.Theory
+namespace Optrol.Theory.Systems
 {
-  internal class PointCollection
+  public class PointCollection
   {
     private double[] mins;
     private double[] maxs;

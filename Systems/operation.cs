@@ -6,7 +6,7 @@
 
 namespace Optrol.Theory.Systems
 {
-  internal enum operation
+  public enum operation
   {
     plus,
     minus,
