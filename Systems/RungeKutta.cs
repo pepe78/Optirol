@@ -22,7 +22,7 @@ namespace Optrol.Theory.Systems
 
             double[] d3 = GetDerivative(pc, system, x3, pars);
             double[] x4;
-            MovePointInternal(system, point, pars, stepSize, d2, out x4);
+            MovePointInternal(system, point, pars, stepSize, d3, out x4);
 
             double[] d4 = GetDerivative(pc, system, x4, pars);
 
