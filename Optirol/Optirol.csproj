@@ -66,8 +66,13 @@
     <Compile Include="PointCollection.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Optimizer.cs" />
-    <Compile Include="Props\Resources.cs" />
-    <Compile Include="Props\Settings.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.cs" />
     <Compile Include="Systems\BaseSystem.cs" />
     <Compile Include="Systems\Functions.cs" />
     <Compile Include="Systems\operation.cs" />
@@ -84,7 +89,10 @@
     <EmbeddedResource Include="Optirol.resx">
       <DependentUpon>Optirol.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Props\Resources.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
